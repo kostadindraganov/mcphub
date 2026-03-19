@@ -3,7 +3,7 @@ version: "3.8"
 services:
   # PostgreSQL database for MCPHub configuration
   postgres:
-    image: pgvector/pgvector:0.8.2-pg18-trixie 
+    image: pgvector/pgvector:pg17 
     container_name: mcphub-postgres
     environment:
       POSTGRES_DB: mcphub
@@ -33,7 +33,7 @@ services:
       # USE_DB: "true"
 
       # Application settings
-      PORT: 3000
+      PORT: 33333
       NODE_ENV: production
 
       # Optional: Custom npm registry
@@ -43,7 +43,7 @@ services:
       # HTTP_PROXY: http://proxy:8080
       # HTTPS_PROXY: http://proxy:8080
     ports:
-      - "${MCPHUB_PORT:-3000}:3000"
+      - "${MCPHUB_PORT:-3333}:3333"
     depends_on:
       postgres:
         condition: service_healthy
