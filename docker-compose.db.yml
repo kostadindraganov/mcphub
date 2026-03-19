@@ -3,7 +3,7 @@ version: "3.8"
 services:
   # PostgreSQL database for MCPHub configuration
   postgres:
-    image: pgvector/pgvector:pg17  
+    image: pgvector/pgvector:0.8.2-pg18-trixie 
     container_name: mcphub-postgres
     environment:
       POSTGRES_DB: mcphub
