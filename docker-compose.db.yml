@@ -33,7 +33,7 @@ services:
       # USE_DB: "true"
 
       # Application settings
-      PORT: 33333
+      PORT: 3333
       NODE_ENV: production
 
       # Optional: Custom npm registry
